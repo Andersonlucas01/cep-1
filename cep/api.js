@@ -6,8 +6,7 @@ function setEndereco(enderecoText) {
 
 function fetchEndereco() {
     const cep = document.getElementById('cepInput').value;
-    const cepLimpo = cep.replace(/\D/g, ''); // Remove caracteres não numéricos
-
+    const cepLimpo = cep.replace(/\D/g, ''); 
     if (cepLimpo.length !== 8) {
         setEndereco('Por favor, digite um CEP válido com 8 dígitos.');
         return;
@@ -28,7 +27,7 @@ function fetchEndereco() {
         });
 }
 
-// Opcional: Pode-se adicionar um event listener para permitir a busca pressionando Enter
+
 document.getElementById('cepInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         fetchEndereco();
